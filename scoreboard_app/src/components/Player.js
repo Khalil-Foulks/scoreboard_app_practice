@@ -1,9 +1,14 @@
 import React from "react";
+import Counter from "./Counter";
 
-function Player(){
+function Player(props){
     return(
         <div className="player">
-            Player
+            <span className="player-name">
+                <button className="remove-player" onClick={() => props.removePlayer(props.id)}></button>
+                {props.name}
+            </span>
+            <Counter />        
         </div>
     )
 }

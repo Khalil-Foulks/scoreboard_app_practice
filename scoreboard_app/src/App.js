@@ -1,6 +1,5 @@
 import Header from "./components/Header";
 import Player from "./components/Player";
-import Counter from "./components/Counter";
 import logo from './logo.svg';
 import './App.css';
 
@@ -9,7 +8,6 @@ function App() {
     <div className="App">
       <Header></Header>
       <Player></Player>
-      <Counter></Counter>
     </div>
   );
 }

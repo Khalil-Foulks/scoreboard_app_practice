@@ -1,9 +1,10 @@
 import React from "react";
 
-function Header() {
+function Header(props) {
     return (
         <header>
-            Header
+            <h1>{props.title}</h1>
+            <span className="stats">Players: {props.totalPlayers}</span>
         </header>
     )
 }
