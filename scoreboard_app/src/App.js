@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Player from "./components/Player";
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -32,7 +31,7 @@ function App() {
   return (
     <div className="scoreboard">
       <Header 
-        title = "Scoreboard"
+        title="Scoreboard"
         totalPlayers={players.length}
       />
       {players.map(player => 

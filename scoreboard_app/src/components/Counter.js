@@ -14,9 +14,9 @@ function Counter(){
 
     return(
         <div className="Counter">
-            <button className="counter-action decrement" onClick={() => decrementScore}></button>
+            <button className="counter-action increment" onClick={() => incrementScore()}> + </button>
             <span className="counter-score">{score}</span>
-            <button className="counter-action increment" onClick={() => incrementScore}></button>
+            <button className="counter-action decrement" onClick={() => decrementScore()}> - </button>
             Counter
         </div>
     )
