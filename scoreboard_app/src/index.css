@@ -219,6 +219,7 @@ input[type=submit]:hover {
   padding: 20px 20px;
   cursor: pointer;
   outline: none;
+  width: 70px;
 }
 
 .counter-action:hover {
