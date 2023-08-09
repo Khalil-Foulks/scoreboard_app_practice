@@ -36,7 +36,7 @@ function App() {
     <div className="scoreboard">
       <Header 
         title="Scoreboard"
-        totalPlayers={players.length}
+        players={players}
       />
       {players.map(player => 
         <Player
