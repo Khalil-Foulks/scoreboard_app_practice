@@ -1,9 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import Counter from "./Counter";
 
 function Player(props){
-    const [score, setScore] = useState(props.score)
-
     return(
         <div className="player">
             <span className="player-name">
@@ -11,11 +9,12 @@ function Player(props){
                 {props.name}
             </span>
             <Counter 
-                score={score}
-                setScore={setScore}
+                score={props.score}
+                id={props.id}
+                changeScore={props.changeScore}
             />        
         </div>
-    )
+    );
 }
 
 export default Player;
