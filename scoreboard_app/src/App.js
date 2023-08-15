@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Player from "./components/Player";
+import PlayerForm from "./components/PlayerForm";
 import './App.css';
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
           changeScore={handleScoreChange}
         />
       )}
+      <PlayerForm/>
     </div>
   );
 }
