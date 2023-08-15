@@ -33,6 +33,19 @@ function App() {
     setPlayers(prevPlayers => prevPlayers.filter(p => p.id !== id));
   }
 
+  const handleAddPlayer = (name) => {
+    // Returns a random integer from 5 to 100,000,000:
+    const id = Math.floor(Math.random() * 100000000) + 5;
+    setPlayers(prevPlayers => [
+      ...prevPlayers,
+      {
+        name,
+        score: 0,
+        id
+      }
+    ]);
+  }
+
   const handleScoreChange = (id, delta) => {
     setPlayers(prevPlayers => prevPlayers.map(player => {
         if (player.id === id) {
@@ -62,7 +75,9 @@ function App() {
           changeScore={handleScoreChange}
         />
       )}
-      <PlayerForm/>
+      <PlayerForm
+        addPlayer={handleAddPlayer}
+      />
     </div>
   );
 }
