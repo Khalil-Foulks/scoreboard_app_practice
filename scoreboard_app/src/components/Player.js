@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import Counter from "./Counter";
 
 function Player(props){
@@ -17,4 +17,10 @@ function Player(props){
     );
 }
 
-export default Player;
+
+const playerPropsAreEqual = (prevProps, nextProps) => {
+    return prevProps.score === nextProps.score;
+}
+
+//fixes performance by preventing unecessary rerenders
+export default memo(Player, playerPropsAreEqual);
