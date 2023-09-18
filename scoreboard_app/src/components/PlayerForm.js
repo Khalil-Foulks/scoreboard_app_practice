@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function PlayerForm(props){
+function PlayerForm({addPlayer}){
     const [value, setValue] = useState("");
 
     const inputChange = (e) => {
@@ -10,7 +10,7 @@ function PlayerForm(props){
 
     const submitForm = (e) => {
         e.preventDefault();
-        props.addPlayer(value)
+        addPlayer(value)
     }
 
 
