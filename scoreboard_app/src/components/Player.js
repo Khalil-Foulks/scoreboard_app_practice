@@ -25,8 +25,8 @@ const playerPropsAreEqual = (prevProps, nextProps) => {
 
 Player.propTypes = {
     removePlayer: PropTypes.func, 
-    name: PropTypes.string, 
-    score: PropTypes.number, 
+    name: PropTypes.string.isRequired, 
+    score: PropTypes.number.isRequired, 
     id: PropTypes.number, 
     changeScore: PropTypes.func
 };
