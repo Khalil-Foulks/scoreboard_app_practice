@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 function PlayerForm({addPlayer}){
     const [value, setValue] = useState("");
@@ -12,8 +13,6 @@ function PlayerForm({addPlayer}){
         e.preventDefault();
         addPlayer(value)
     }
-
-
 
     return(
         <form onSubmit={submitForm}>
@@ -30,5 +29,9 @@ function PlayerForm({addPlayer}){
         </form>
     )
 }
+
+PlayerForm.propTypes = {
+    addPlayer: PropTypes.func 
+};
 
 export default PlayerForm;
